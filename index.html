@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background-color : #555555; font-family: Arial, sans-seif; color: #c2c2c2; padding: 20px;">
+<body
+  style="
+  background-image: url('https://media.512pixels.net/downloads/macos-wallpapers-thumbs/27-Golden-Gate-thumb.jpg');
+  background-size: cover;
+  height: 100vh;
+  font-family:Arial, sans-serif;
+  margin: 0;
+  ">
 
-  <h1 style="margin: 5px;">Welcome to HackOS</h1>
+  <div
+    style="
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    color:rgb(255, 255, 255);
+    ">
+    
+    <p style="margin-left: 16px;">HackOS</p>
 
-  <h2 style="margin: 5px;">About Me</h2>
+    <p id="DateTimeElement" style="margin-right: 16px;">
+      Loading...
+    </p>
+
+  </div>
+
+  <div
+    style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    border: solid;
+    border-radius: 16px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255);
+    ">
+    
+  <h1 style="margin: 0;">Welcome to HackOS</h1>
+
+  <p>Hello! I am Hack.</p>
 
   <img
-    src="https://images.unsplash.com/photo-1544502062-f82887f03d1c?q=80&w=1918&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    style="width: 150px; height: 150px; border-radius: 20px; object-fit: cover;"
-  />
+    src="https://images.unsplash.com/photo-1544502062-f82887f03d1c?q=80&w=1859&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    style="
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+    ">
 
-  <p>
-    Hello! My name is Helloking.<br>
-    I enjoy <strong>coding</strong>, <strong>building</strong>, and listening to <strong>music</strong>.
-  </p>
+    <p>I enjoy coding. music, and learning new stuff</p>
 
-  <p>
-    My goal is to leanr more about web development and build cool stuff I can actually use.
-  </p>
+    <a href="https://github.com/guccmanegu-eng">
+      Check out my GitHub!
+    </a>
+  
+  </div>"
 
-  <p>
-    My favorite animal is cats!
-  </p>
+  <script>
 
-  <p>
-    Check out my favorite website:
-  </p>
+      function updateDateTime() {
+        var currentDateTime = new Date().toLocaleString();
+        var dateTimeText = document.querySelector("#DateTimeElement");
+        dateTimeText.innerHTML = currentDateTime;
+      }
 
-  <a href="https://www.youtube.com" target="_blank">
-    Visit Youtube
-  </a>
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+  </script>
 
-</body>
+</body>"
 
 </html>
