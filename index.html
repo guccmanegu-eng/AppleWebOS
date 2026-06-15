@@ -1,81 +1,166 @@
 <!DOCTYPE html>
 <html>
 
-<body
-  style="
-  background-image: url('https://media.512pixels.net/downloads/macos-wallpapers-thumbs/27-Golden-Gate-thumb.jpg');
-  background-size: cover;
-  height: 100vh;
-  font-family:Arial, sans-serif;
-  margin: 0;
-  ">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <div
-    style="
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    color:rgb(255, 255, 255);
-    ">
-    
-    <p style="margin-left: 16px;">HackOS</p>
+<body>
 
-    <p id="DateTimeElement" style="margin-right: 16px;">
+  <div class="topbar">
+
+    <p id="welcomeopen" class="topbar-item">
+      HackOS
+    </p>
+
+    <p id="timeElement" class="topbar-item">
       Loading...
     </p>
 
   </div>
 
-  <div
-    style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    border: solid;
-    border-radius: 16px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255);
-    ">
-    
-  <h1 style="margin: 0;">Welcome to HackOS</h1>
+  <div id="desktopApps">
 
-  <p>Hello! I am Hack.</p>
+    <div id="journalIcon" class="desktop-icon">
 
-  <img
-    src="https://images.unsplash.com/photo-1544502062-f82887f03d1c?q=80&w=1859&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    style="
-    width: 120px;
-    height: 120px;
-    border-radius: 16px;
-    object-fit: cover;
-    ">
+      <img src="https://cdn.iconscout.com/icon/free/png-512/free-apple-notes-icon-svg-download-png-493153.png?f=webp&w=256">
 
-    <p>I enjoy coding. music, and learning new stuff</p>
+      <p>Journal</p>
 
-    <a href="https://github.com/guccmanegu-eng">
-      Check out my GitHub!
-    </a>
+    </div>
+
+  </div>
+
+  <div id="desktopApps">
+
+    <div id="projectsIcon" class="desktop-icon">
+
+      <img src="https://cdn.iconscout.com/icon/free/png-512/free-apple-ibooks-icon-svg-download-png-493146.png?f=webp&w=256">
+
+      <p>Projects</p>
+
+    </div>
+
+  </div>
   
-  </div>"
 
-  <script>
 
-      function updateDateTime() {
-        var currentDateTime = new Date().toLocaleString();
-        var dateTimeText = document.querySelector("#DateTimeElement");
-        dateTimeText.innerHTML = currentDateTime;
-      }
+  <div
+    class="window"
+    id="welcome"
+    style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  
+    <div class="windowheader" id="welcomeheader">
 
-      updateDateTime();
-      setInterval(updateDateTime, 1000);
-  </script>
+       <p class="headertext">
+      Welcome to HackOS!
+    </p>
 
-</body>"
+    <div class="closebutton" id="welcomeclose"></div>
+<div style="padding: 15px;">
 
+    <h1>Welcome to HackOS!</h1>
+
+    <p>Hello, i'm your new operating system!</p>
+
+    <img
+      src="https://images.unsplash.com/photo-1544502062-f82887f03d1c?q=80&w=1259&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      style="width:120px; height:120px; border-radius:12px; object-fit:cover;">
+
+      <p>I enjoy coding, music, and learning new things.</p>
+      
+      <a href="https://github.com/guccmanegu-eng/AppleWebOS">
+        My Github
+      </a>
+
+    </div>   
+
+  </div>
+  </div>
+
+  <div
+    class="window"
+    id="journal"
+    style="
+    width: 700px;
+    height: 450px;
+    display: flex;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    display: none;">
+  
+    <div class="windowheader" id="journalheader">
+      <div id="journalopen">Journal</div>
+
+      <div
+        class="closebutton"
+        id="journalclose">
+      </div>
+    </div>
+
+    <div class="journal-content">
+
+      <div id="sidebar">
+
+      </div>
+
+      <div id="notesContent">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <div
+    class="window"
+    id="projectsWindowgit init"
+
+    style="
+    display:none;
+    top:180px;
+    left:450px;
+    ">
+
+  <div
+   class="windowheader"
+    id="projectsWindowheader">
+
+    <p class="headertext">
+      Projects
+    </p>
+
+   <div
+      class="closebutton"
+      id="projectsclose">
+   </div>
+
+  </div>
+
+    <div class="projects-content">
+
+      <h2>My Projects</h2>
+
+      <p>
+        Here are some things I've been working on!
+      </p>
+
+      <div id="projects">
+
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+  </div>
+
+        <script src="script.js"></script>
+        
+</body>
 </html>
