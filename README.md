@@ -197,4 +197,4 @@ The goal of HackOS is not to create a real operating system, but to learn web de
 
 Each new feature teaches a different programming concept while making the project feel more realistic.
 
-HackOS is slowly evolving from a simple webpage into an interactive desktop experience.
+HackOS is hopefully evolving from a simple webpage into an interactive desktop experience.
